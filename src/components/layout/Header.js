@@ -8,8 +8,7 @@ function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <div className="sticky top-0">
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+    <nav className="sticky top-0 z-50 flex flex-wrap items-center justify-between p-6 mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
     <div className="flex items-center text-2xl text-white">
         {/*<div className="w-12 mr-3">
           <LogoIcon />
@@ -58,23 +57,22 @@ function Header({ siteTitle }) {
         } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
       >
         <div className="text-sm lg:flex">
-        <AnchorLink className="block mt-4 lg:ml-4 mx-4 text-white lg:inline-block lg:mt-0 hover:text-white" href="#features">
+        <AnchorLink className="block mt-4 lg:ml-4 mx-4 text-white lg:inline-block lg:mt-0 hover:text-white" href="#features" onClick={() => toggleExpansion(!isExpanded)}>
           Features
         </AnchorLink>
-        <AnchorLink className="block mt-4 lg:ml-4 mx-4 text-white lg:inline-block lg:mt-0 hover:text-white" href="#services">
+        <AnchorLink className="block mt-4 lg:ml-4 mx-4 text-white lg:inline-block lg:mt-0 hover:text-white" href="#services" onClick={() => toggleExpansion(!isExpanded)}>
           Services
         </AnchorLink>
-        <AnchorLink className="block mt-4 lg:ml-4 mx-4 text-white lg:inline-block lg:mt-0 hover:text-white" href="#stats">
+        <AnchorLink className="block mt-4 lg:ml-4 mx-4 text-white lg:inline-block lg:mt-0 hover:text-white" href="#stats" onClick={() => toggleExpansion(!isExpanded)}>
           Stats
         </AnchorLink>
-        <AnchorLink className="block mt-4 lg:ml-4 mx-4 text-white lg:inline-block lg:mt-0 hover:text-white" href="#testimonials">
+        <AnchorLink className="block mt-4 lg:ml-4 mx-4 text-white lg:inline-block lg:mt-0 hover:text-white" href="#testimonials" onClick={() => toggleExpansion(!isExpanded)}>
           Testimonials
         </AnchorLink>
         </div>
       </div>
 
     </nav>
-    </div>
   )
 }
 
