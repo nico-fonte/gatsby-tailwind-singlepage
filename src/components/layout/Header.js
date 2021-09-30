@@ -54,7 +54,7 @@ function Header({ siteTitle }) {
       <div
         className={`${
           isExpanded ? `block` : `hidden`
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
+        } w-full block flex-end lg:flex lg:items-center lg:w-auto`}
       >
         <div className="text-sm lg:flex">
         <AnchorLink className="block mt-4 lg:ml-4 mx-4 text-white lg:inline-block lg:mt-0 hover:text-white" href="#features" onClick={() => toggleExpansion(!isExpanded)}>
